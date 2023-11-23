@@ -1,0 +1,27 @@
+# Analýza pro projekt Zámecká banka
+
+## Autoři projektu:
+1. Valla
+2. Burian
+3. Hos
+
+## Stručný popis aplikace
+Jednoduchá finanční aplikace
+
+## Požadavky na funkcionalitu:
+### Nutná:
+1. Zaplať mi
+2. Platby
+3. Karty
+
+### Důležitá:
+1. Stav účtu
+2. Blokace účtu
+3. Trvalý příkaz k úhradě
+
+### Rozšiřující:
+1. Kontakt na vašeho bankéře
+2. Pojištění
+3. Graf
+   
+### Další poznámky:
