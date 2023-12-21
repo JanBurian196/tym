@@ -31,6 +31,7 @@
         <Button x:Name="trval" Content="Trvalý příkaz" HorizontalAlignment="Left" Margin="321,283,0,0" VerticalAlignment="Top" Height="37" Width="72" Click="trval_Click"/>
         <Button x:Name="kontakt" Content="Kontakt" HorizontalAlignment="Left" Margin="144,357,0,0" VerticalAlignment="Top" Height="47" Width="72" Click="kontakt_Click"/>
         <Button x:Name="pojisteni" Content="Pojištění" HorizontalAlignment="Left" Margin="398,283,0,0" VerticalAlignment="Top" Height="37" Width="84" Click="pojisteni_Click"/>
+        <Image HorizontalAlignment="Left" Height="141" Margin="566,283,0,0" VerticalAlignment="Top" Width="234" Source="/¨fsa.png" Opacity="0.3"/>
 
 
 
