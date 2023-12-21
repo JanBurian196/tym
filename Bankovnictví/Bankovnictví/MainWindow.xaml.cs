@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,22 +33,47 @@ namespace Bankovnictví
 
         private void Vklad_Click(object sender, RoutedEventArgs e)
         {
-            cislo = int.Parse(castka.Text);
-            cislo2 = int.Parse(bucet.Text);
-            result = cislo + cislo2;
 
-            bucet.Text = result.ToString();
-           
+            if (castka.Text == "")
+            {
+
+                castka.Text = "zadejte hodnotu";
+            }
+
+            else 
+            {
+                cislo = int.Parse(castka.Text);
+                cislo2 = int.Parse(bucet.Text);
+                result = cislo + cislo2;
+
+                bucet.Text = result.ToString();
+            };
+
+            
+
+          
            
         }
 
         private void Platba_Click(object sender, RoutedEventArgs e)
         {
-            cislo = int.Parse(castka.Text);
-            cislo2 = int.Parse(sucet.Text);
-            result = cislo + cislo2;
+            if (castka.Text == "")
+            {
 
-            sucet.Text = result.ToString();
+                castka.Text = "zadejte hodnotu";
+            }
+
+            else
+            {
+                cislo = int.Parse(castka.Text);
+                cislo2 = int.Parse(sucet.Text);
+                result = cislo + cislo2;
+
+                sucet.Text = result.ToString();
+            };
+
+
+           
         }
 
         private void karta_Click(object sender, RoutedEventArgs e)
@@ -90,32 +116,56 @@ namespace Bankovnictví
 
         private void prevod_Click_1(object sender, RoutedEventArgs e)
         {
-            cislo = int.Parse(castka.Text);
-            cislo2 = int.Parse(sucet.Text);
-            result = cislo2 + cislo;
+            if (castka.Text == "")
+            {
 
-            sucet.Text = result.ToString();
+                castka.Text = "zadejte hodnotu";
+            }
 
-            cislo = int.Parse(castka.Text);
-            cislo2 = int.Parse(bucet.Text);
-            result = cislo2 - cislo;
+            else
+            {
+                cislo = int.Parse(castka.Text);
+                cislo2 = int.Parse(sucet.Text);
+                result = cislo2 + cislo;
 
-            bucet.Text = result.ToString();
+                sucet.Text = result.ToString();
+
+                cislo = int.Parse(castka.Text);
+                cislo2 = int.Parse(bucet.Text);
+                result = cislo2 - cislo;
+
+                bucet.Text = result.ToString();
+            };
+
+          
         }
 
         private void prevodz_Click(object sender, RoutedEventArgs e)
         {
-            cislo = int.Parse(castka.Text);
-            cislo2 = int.Parse(sucet.Text);
-            result = cislo2 - cislo;
 
-            sucet.Text = result.ToString();
+            if (castka.Text == "")
+            {
 
-            cislo = int.Parse(castka.Text);
-            cislo2 = int.Parse(bucet.Text);
-            result = cislo2 + cislo;
+                castka.Text = "zadejte hodnotu";
+            }
 
-            bucet.Text = result.ToString();
+            else
+            {
+                cislo = int.Parse(castka.Text);
+
+                cislo2 = int.Parse(sucet.Text);
+                result = cislo2 - cislo;
+
+                sucet.Text = result.ToString();
+
+                cislo = int.Parse(castka.Text);
+                cislo2 = int.Parse(bucet.Text);
+                result = cislo2 + cislo;
+
+                bucet.Text = result.ToString();
+            };
+
+          
         }
 
         private void trval_Click(object sender, RoutedEventArgs e)
@@ -135,6 +185,11 @@ namespace Bankovnictví
         {
           zobraz.Text= "";
             zobraz.Text = "Kontakt na naší pobočku je +420 652 502 958 nebo zameckabanka@bank.cz ";
+        }
+
+        private void castka_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
