@@ -39,6 +39,10 @@ namespace Bankovnictví
 
                 castka.Text = "zadejte hodnotu";
             }
+            if (castka.Text == "zadejte hodnotu")
+            {
+                castka.Text = "zadejte hodnotu";
+            }
 
             else 
             {
@@ -49,10 +53,10 @@ namespace Bankovnictví
                 bucet.Text = result.ToString();
             };
 
-            
-
           
-           
+
+
+
         }
 
         private void Platba_Click(object sender, RoutedEventArgs e)
@@ -60,6 +64,10 @@ namespace Bankovnictví
             if (castka.Text == "")
             {
 
+                castka.Text = "zadejte hodnotu";
+            }
+            if (castka.Text == "zadejte hodnotu")
+            {
                 castka.Text = "zadejte hodnotu";
             }
 
@@ -105,11 +113,25 @@ namespace Bankovnictví
 
         private void kup_Click(object sender, RoutedEventArgs e)
         {
-            cislo = int.Parse(castka.Text);
-            cislo2 = int.Parse(bucet.Text);
-            result = cislo2 - cislo;
+            if (castka.Text == "")
+            {
 
-            bucet.Text = result.ToString();
+                castka.Text = "zadejte hodnotu";
+            }
+            if (castka.Text == "zadejte hodnotu")
+            {
+                castka.Text = "zadejte hodnotu";
+            }
+
+            else
+            {
+                cislo = int.Parse(castka.Text);
+                cislo2 = int.Parse(bucet.Text);
+                result = cislo2 - cislo;
+
+                bucet.Text = result.ToString();
+            }
+
         }
 
       
@@ -121,6 +143,11 @@ namespace Bankovnictví
 
                 castka.Text = "zadejte hodnotu";
             }
+            if (castka.Text == "zadejte hodnotu")
+            {
+                castka.Text = "zadejte hodnotu";
+            }
+
 
             else
             {
@@ -148,6 +175,10 @@ namespace Bankovnictví
 
                 castka.Text = "zadejte hodnotu";
             }
+            if (castka.Text == "zadejte hodnotu")
+            {
+                castka.Text = "zadejte hodnotu";
+            }
 
             else
             {
@@ -170,9 +201,24 @@ namespace Bankovnictví
 
         private void trval_Click(object sender, RoutedEventArgs e)
         {
-          cislo = int.Parse(castka.Text);
-            zobraz.Text = "Trvalý příkaz je nastaven měsíčně. Částka je: " + castka.Text; 
-            
+            castka.Text = "";
+            if (castka.Text == "")
+            {
+
+                castka.Text = "zadejte hodnotu";
+            }
+            if (castka.Text == "zadejte hodnotu")
+            {
+                castka.Text = "zadejte hodnotu";
+            }
+
+            else
+            {
+                cislo = int.Parse(castka.Text);
+                zobraz.Text = "Trvalý příkaz je nastaven měsíčně. Částka je: " + castka.Text;
+            }
+
+
         }
 
         private void pojisteni_Click(object sender, RoutedEventArgs e)
